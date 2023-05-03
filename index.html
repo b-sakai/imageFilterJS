@@ -7,10 +7,12 @@
 </head>
 <body>
 	<label for="time-range">Time Coefficient:</label>
-	<input type="range" id="time-range" name="time-range" min="0" max="5" step="0.01" value="0.5">
-</body>
-<body>
+	<input type="range" id="time-range" name="time-range" min="0" max="5" step="0.01" value="1">
 	<label for="threshold">Threshold:</label>
 	<input type="range" id="threshold" name="threshold" min="0" max="1" step="0.01" value="0.5">
+	<br>
+	<input type="file" id="image-input" name="image-input" accept="image/*">
+	<canvas id="canvas" style="max-width:100%;"></canvas>
 </body>
 </html>
+

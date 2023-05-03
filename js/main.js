@@ -77,7 +77,28 @@ scene.add(mesh);
 
 // 画像を読み込み
 const img = new Image();
-img.src = './js/sample.jpg';
+
+// ファイル選択ボタンの要素を取得する
+const imageInput = document.getElementById('image-input');
+
+// ファイルが選択された時の処理
+imageInput.addEventListener('change', (event) => {
+  // 選択されたファイルを取得する
+  const file = event.target.files[0];
+  // 画像ファイルでない場合は処理を終了する
+  if (!file || !file.type.startsWith('image/')) return;
+
+  // FileReaderオブジェクトを生成する
+  const reader = new FileReader();
+  // 画像の読み込みが完了した時の処理を追加する
+  reader.onload = (event) => {
+    // 画像の読み込みが完了したら、img要素に読み込んだ画像を設定する
+    img.src = event.target.result;
+  };
+  // 画像ファイルを読み込む
+  reader.readAsDataURL(file);
+});
+
 // 画像の読み込み完了時の処理
 img.onload = () => {
   // テクスチャーに画像を設定して更新
