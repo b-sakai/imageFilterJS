@@ -3,6 +3,10 @@
 JavaScriptでフラグメントシェーダやバーテックスシェーダをどう使えば良いか考えて実装してみたもの
 コードのリファクタリングなどは未実施
 
+## Github Pages
+
+https://b-sakai.github.io/imageFilterJS/
+
 ## 実行方法
 
 * vscodeにliveserverの拡張機能を入れる
